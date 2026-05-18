@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &182221375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1026443287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,9 +569,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9e0b5f4bdcd2d4f8ffb498a108c2a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bounce
-  speed: 0.02
-  xMax: 9
-  xMin: -9
+  xSpeed: 3
+  xMax: 5
+  xMin: -5
+  ySpeed: 3
+  yMax: 5
+  yMin: -5
 --- !u!212 &1026443288
 SpriteRenderer:
   serializedVersion: 2

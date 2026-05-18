@@ -3,11 +3,18 @@ using UnityEngine;
 public class Bounce : MonoBehaviour
 {
 
-    public float speed = 0.02f;
+    public float xSpeed;
+    public float ySpeed;
+
     //xMax
     //xMin
     public float xMax;
     public float xMin;
+    //yMAx
+    //yMin
+    public float yMax;
+    public float yMin;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,25 +29,44 @@ public class Bounce : MonoBehaviour
         Vector3 newPosition = transform.position;
 
         //When assigning a value to a float, we want to append "f" to the end
-        newPosition.x += speed;
+        newPosition.x += xSpeed*Time.deltaTime;
+        newPosition.y += ySpeed*Time.deltaTime;
 
         transform.position = newPosition;
 
-        if (transform.position.x > xMax)
+        if (newPosition.x > xMax)
         {
             //option 1
-            speed = -speed;
+            //xSpeed = -xSpeed;
             //option 2
-            //speed *= -1f;
+            xSpeed *= -1f;
 
         }
 
-        if (transform.position.x < xMin)
+        if (newPosition.x < xMin)
         {
             //option 1
-            speed = -speed;
+            //xSpeed = -xSpeed;
             //option 2
-            //speed *= -1f;
+            xSpeed *= -1f;
+
+        }
+
+        if (newPosition.y > yMax)
+        {
+            //option 1
+            //ySpeed = -ySpeed;
+            //option 2
+            ySpeed *= -1f;
+
+        }
+
+        if (newPosition.y < yMin)
+        {
+            //option 1
+            //ySpeed = -ySpeed;
+            //option 2
+            ySpeed *= -1f;
 
         }
 
