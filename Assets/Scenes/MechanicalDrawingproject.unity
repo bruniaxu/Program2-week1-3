@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 183558238}
   - component: {fileID: 183558237}
   - component: {fileID: 183558239}
+  - component: {fileID: 183558240}
   m_Layer: 0
   m_Name: DuckyWings
   m_TagString: Untagged
@@ -205,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 183558236}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.22, y: -2.68, z: 0}
+  m_LocalPosition: {x: 6.34, y: -4.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -223,6 +224,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dde619ad01d191428deb52806ab3623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckyMovement
+  xSpeed: 5
+  ySpeed: 0
+  xMax: 9
+  xMin: -9
+  yMax: 5
+  yMin: -5
+--- !u!114 &183558240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183558236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944527803c1a83b4b80529c8a0da6a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pulser
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 38.8471
+      outSlope: 38.8471
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.025497437
+      value: 0.9905014
+      inSlope: 38.8471
+      outSlope: 38.8471
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  startSize: 0
+  endSize: 3
+  duration: 1
 --- !u!1 &619668824
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +280,9 @@ GameObject:
   - component: {fileID: 619668826}
   - component: {fileID: 619668825}
   - component: {fileID: 619668827}
+  - component: {fileID: 619668828}
+  - component: {fileID: 619668829}
+  - component: {fileID: 619668830}
   m_Layer: 0
   m_Name: Ducky
   m_TagString: Untagged
@@ -309,7 +358,7 @@ Transform:
   m_GameObject: {fileID: 619668824}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.24, y: -2.59, z: 0}
+  m_LocalPosition: {x: 5, y: -4.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -327,6 +376,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dde619ad01d191428deb52806ab3623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckyMovement
+  xSpeed: 5
+  ySpeed: 0
+  xMax: 9
+  xMin: -9
+  yMax: 5
+  yMin: -5
+--- !u!114 &619668828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619668824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763d4982eb9002a4885966477affcabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DuckyIdle
+  hidePosition: {x: 0, y: 0, z: 0}
+  hideDistanceThreshold: 0
+  gameCamera: {fileID: 1141497733}
+--- !u!114 &619668829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619668824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9887066a2e7ba9747a7d145e03ce1022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Teleport
+  duration: 3
+--- !u!114 &619668830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619668824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944527803c1a83b4b80529c8a0da6a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pulser
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -21.14803
+      outSlope: -21.14803
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.047210693
+      value: 0.0015869141
+      inSlope: -21.14803
+      outSlope: -21.14803
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  startSize: 3
+  endSize: 0
+  duration: 1
 --- !u!1 &1141497731
 GameObject:
   m_ObjectHideFlags: 0
