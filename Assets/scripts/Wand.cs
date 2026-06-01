@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Wand : MonoBehaviour
 {
-    //create public variable
+    //create public variables
     //set camera to make the wand visible on the game view
     public Camera gameCamera;
 

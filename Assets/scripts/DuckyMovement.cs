@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 //this script is to make the two coakatiels move between point A and Point B when the wand touches it 
 public class DuckyMovement : MonoBehaviour
 {
-    //set public varaible
+    //set public variables
     public Camera gameCamera;
     //set two locations that the two parrots will move in
     public Vector3 pointA;
