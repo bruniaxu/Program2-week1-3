@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 183558238}
   - component: {fileID: 183558237}
   - component: {fileID: 183558239}
-  - component: {fileID: 183558240}
   m_Layer: 0
   m_Name: DuckyWings
   m_TagString: Untagged
@@ -206,8 +205,8 @@ Transform:
   m_GameObject: {fileID: 183558236}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.34, y: -4.03, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.38, y: 2.64, z: 0}
+  m_LocalScale: {x: -1.0342335, y: 1.0280944, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -230,45 +229,6 @@ MonoBehaviour:
   xMin: -9
   yMax: 5
   yMin: -5
---- !u!114 &183558240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183558236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 944527803c1a83b4b80529c8a0da6a45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pulser
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 38.8471
-      outSlope: 38.8471
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.025497437
-      value: 0.9905014
-      inSlope: 38.8471
-      outSlope: 38.8471
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  startSize: 0
-  endSize: 3
-  duration: 1
 --- !u!1 &619668824
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,9 +240,6 @@ GameObject:
   - component: {fileID: 619668826}
   - component: {fileID: 619668825}
   - component: {fileID: 619668827}
-  - component: {fileID: 619668828}
-  - component: {fileID: 619668829}
-  - component: {fileID: 619668830}
   m_Layer: 0
   m_Name: Ducky
   m_TagString: Untagged
@@ -358,7 +315,7 @@ Transform:
   m_GameObject: {fileID: 619668824}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -4.05, z: 0}
+  m_LocalPosition: {x: 5, y: -4.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -382,73 +339,6 @@ MonoBehaviour:
   xMin: -9
   yMax: 5
   yMin: -5
---- !u!114 &619668828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619668824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 763d4982eb9002a4885966477affcabb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DuckyIdle
-  hidePosition: {x: 0, y: 0, z: 0}
-  hideDistanceThreshold: 0
-  gameCamera: {fileID: 1141497733}
---- !u!114 &619668829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619668824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9887066a2e7ba9747a7d145e03ce1022, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Teleport
-  duration: 3
---- !u!114 &619668830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619668824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 944527803c1a83b4b80529c8a0da6a45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pulser
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: -21.14803
-      outSlope: -21.14803
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.047210693
-      value: 0.0015869141
-      inSlope: -21.14803
-      outSlope: -21.14803
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  startSize: 3
-  endSize: 0
-  duration: 1
 --- !u!1 &1141497731
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +562,7 @@ Transform:
   m_GameObject: {fileID: 1369704895}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.98, y: -1.16, z: 0}
+  m_LocalPosition: {x: -5.98, y: -1.51, z: 0}
   m_LocalScale: {x: 1.6757288, y: 1.6757288, z: 1.6757288}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -687,9 +577,62 @@ MonoBehaviour:
   m_GameObject: {fileID: 1369704895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85207d1776b5ff64c88747e94568fc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: e8d7de47a5ab0af4bbfb4c59da726fa5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeShadow
+  m_EditorClassIdentifier: Assembly-CSharp::Tree
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.2
+      outSlope: 1.2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.25
+      value: 0.3
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.75
+      value: 0.3
+      inSlope: -2
+      outSlope: -2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1.2
+      outSlope: -1.2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  treeChangingSize: 0.1
+  speed: 0.09
 --- !u!1 &1569427376
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +737,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d7de47a5ab0af4bbfb4c59da726fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tree
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.2
+      outSlope: 1.2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.25
+      value: 0.3
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0.046472907
+      outSlope: 0.046472907
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.75858366
+      value: 0.3
+      inSlope: -1.9748604
+      outSlope: -1.9748604
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1.2426666
+      outSlope: -1.2426666
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  treeChangingSize: 0.1
+  speed: 0.2
 --- !u!1 &2019220863
 GameObject:
   m_ObjectHideFlags: 0
