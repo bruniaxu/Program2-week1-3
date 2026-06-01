@@ -1,19 +1,21 @@
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
+using UnityEngine.InputSystem;
+
 
 public class DuckyMovement : MonoBehaviour
 {
-    public float xSpeed;
-    public float ySpeed;
 
-    //xMax
-    //xMin
-    public float xMax;
-    public float xMin;
-    //yMAx
-    //yMin
-    public float yMax;
-    public float yMin;
+    public Camera gameCamera;
+
+    public Vector3 pointA;
+    public Vector3 pointB;
+
+    public float hover = 1.5f;
+    public float speed = 1f;
+
+    private float progress = 0f;
+    private bool movingOtherPoint = true;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,48 +26,39 @@ public class DuckyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    Vector3 newPosition = transform.position;
+        Vector3 mouseScreenPosition = Mouse.current.position.ReadValue();
+        Vector3 mouseWorldPosition = gameCamera.ScreenToWorldPoint(mouseScreenPosition);
+        mouseWorldPosition.z = 0f;
 
-    //When assigning a value to a float, we want to append "f" to the end
-    newPosition.x += xSpeed * Time.deltaTime;
-    newPosition.y += ySpeed * Time.deltaTime;
+        float xDiff = transform.position.x - mouseWorldPosition.x;
+        float yDiff = transform.position.y - mouseWorldPosition.y;
 
-    transform.position = newPosition;
+        float distanceSquared = xDiff * xDiff + yDiff * yDiff;
 
-    if (newPosition.x > xMax)
-    {
-        //option 1
-        //xSpeed = -xSpeed;
-        //option 2
-        xSpeed *= -1f;
+        if (distanceSquared < hover * hover)
+        {
+            if (movingOtherPoint == true)
+            {
+                progress = progress + Time.deltaTime * speed;
+            }
+            else
+            {
+                progress = progress - Time.deltaTime * speed;
+            }
 
+            if (progress >= 1f)
+            {
+                progress = 1f;
+                movingOtherPoint = false;
+            }
+
+            if (progress <= 0f)
+            {
+                progress = 0f;
+                movingOtherPoint = true;
+            }
+
+            transform.position = Vector3.Lerp(pointA, pointB, progress);
+        }
     }
-
-    if (newPosition.x < xMin)
-    {
-        //option 1
-        //xSpeed = -xSpeed;
-        //option 2
-        xSpeed *= -1f;
-
-    }
-
-    if (newPosition.y > yMax)
-    {
-        //option 1
-        //ySpeed = -ySpeed;
-        //option 2
-        ySpeed *= -1f;
-
-    }
-
-    if (newPosition.y < yMin)
-    {
-        //option 1
-        //ySpeed = -ySpeed;
-        //option 2
-        ySpeed *= -1f;
-
-    }
-}
 }

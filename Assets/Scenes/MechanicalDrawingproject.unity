@@ -223,12 +223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dde619ad01d191428deb52806ab3623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckyMovement
-  xSpeed: 5
-  ySpeed: 0
-  xMax: 9
-  xMin: -9
-  yMax: 5
-  yMin: -5
+  gameCamera: {fileID: 1141497733}
+  pointA: {x: -6, y: 2.64, z: 0}
+  pointB: {x: 6, y: 2.64, z: 0}
+  hover: 1.5
+  speed: 0.5
 --- !u!1 &619668824
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,12 +332,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dde619ad01d191428deb52806ab3623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckyMovement
-  xSpeed: 5
-  ySpeed: 0
-  xMax: 9
-  xMin: -9
-  yMax: 5
-  yMin: -5
+  gameCamera: {fileID: 1141497733}
+  pointA: {x: 5, y: -4.2, z: 0}
+  pointB: {x: -5, y: -4.2, z: 0}
+  hover: 1.5
+  speed: 0.5
 --- !u!1 &1141497731
 GameObject:
   m_ObjectHideFlags: 0
